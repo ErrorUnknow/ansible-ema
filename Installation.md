@@ -39,5 +39,6 @@ Déconnectez-vous et supprimez la VM.
 
 ```
 $ exit
-$ vagrant destroy -f ubuntu```
+$ vagrant destroy -f ubuntu
+```
 
