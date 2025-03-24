@@ -24,6 +24,13 @@ Connectez-vous au Control Host :
 
 Configurez l’authentification par clé SSH avec les trois Target Hosts.
 
+```
+ssh-keyscan -t rsa target01 target02 target03 >> .ssh/known_hosts
+$ ssh-keygen
+$ ssh-copy-id vagrant@target01
+$ ssh-copy-id vagrant@target02
+$ ssh-copy-id vagrant@target03
+```
 
 Installez Ansible.
 Envoyez un premier ping Ansible sans configuration.
