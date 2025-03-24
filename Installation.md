@@ -27,6 +27,7 @@ Vérifiez si l’installation s’est bien déroulée.
 Notez la version d’Ansible.
 
 ```
+vagrant@ubuntu:~$ ansible --version
 ansible 2.10.8
 config file = None
 configured module search path = ['/home/vagrant/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
