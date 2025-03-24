@@ -120,9 +120,115 @@ log_path = ~/logs/ansible.log
 ```
 Testez la journalisation.
 
+```
+ansible all -i target01,target02,target03 -m ping
+cat ~/logs/ansible.log
+```
+```
+vagrant@control:~/monprojet$ cat ~/logs/ansible.log
+2025-03-24 14:58:38,668 p=3195 u=vagrant n=ansible | target02 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-24 14:58:38,670 p=3195 u=vagrant n=ansible | target01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-24 14:58:38,670 p=3195 u=vagrant n=ansible | target03 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+```
+
 Créez un groupe [testlab] avec vos trois Target Hosts.
+
+```
+$ touch inventory
+$ sudo nano inventory
+```
+```
+[testlab]
+target01
+target02
+target03
+
+[testlab:vars]
+ansible_python_interpreter=/usr/bin/python3
+```
+
 Définissez explicitement l’utilisateur vagrant pour la connexion à vos cibles.
+```
+$ sudo nano inventory
+```
+```
+[testlab]
+target01
+target02
+target03
+
+[testlab:vars]
+ansible_python_interpreter=/usr/bin/python3
+ansible_user=vagrant
+```
 Envoyez un ping Ansible vers le groupe de machines [all].
+
+```$ ansible all -m ping```
+```
+vagrant@control:~/monprojet$ ansible all -m ping
+target01 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+target03 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+target02 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+```
+
 Définissez l’élévation des droits pour l’utilisateur vagrant sur les Target Hosts.
+
+```
+$ sudo nano inventory
+```
+```
+[testlab]
+target01
+target02
+target03
+
+[testlab:vars]
+ansible_python_interpreter=/usr/bin/python3
+ansible_user=vagrant
+ansible_become=yes
+```
 Affichez la première ligne du fichier /etc/shadow sur tous les Target Hosts.
+
+```$ ansible testlab -a "head -n 1 /etc/shadow"```
+```
+vagrant@control:~/monprojet$ ansible testlab -a "head -n 1 /etc/shadow"
+target01 | CHANGED | rc=0 >>
+root:*:19977:0:99999:7:::
+target02 | CHANGED | rc=0 >>
+root:*:19977:0:99999:7:::
+target03 | CHANGED | rc=0 >>
+root:*:19977:0:99999:7:::
+```
+
 Quittez le Control Host et supprimez toutes les VM de l’atelier.
+```
+$ exit
+$ vagrant destroy -f
+```
