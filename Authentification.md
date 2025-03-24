@@ -6,7 +6,7 @@ Démarrez les VM :
 
 Connectez-vous au Control Host :
 
-````$ vagrant ssh control```
+```$ vagrant ssh control```
 
 Ansible est déjà installé sur cette machine :
 
