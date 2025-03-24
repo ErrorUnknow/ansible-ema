@@ -56,6 +56,13 @@ Rafraîchissez les informations sur les paquets.
 
 ```$ sudo apt update```
 
+Répétez l’exercice précédent en configurant un dépôt PPA (Personal Package Archive) pour Ansible :
+
+```
+$ sudo apt-add-repository ppa:ansible/ansible
+$ sudo apt update
+```
+
 Recherchez le paquet ansible avec les options qui vont bien.
 
 ```$ apt-cache search --names-only ansible```
