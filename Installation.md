@@ -97,3 +97,22 @@ Déconnectez-vous et supprimez la VM.
 $ exit
 $ vagrant destroy -f ubuntu
 ```
+# Exercice 3
+
+Lancez une VM Rocky Linux et installez Ansible en utilisant PIP et Virtualenv.
+
+```
+$ vagrant up rocky
+$ vagrant ssh rocky
+$ sudo dnf install -y python3-pip
+$ python3 -m venv ~/.venv/ansible
+$ source ~/.venv/ansible/bin/activate
+(ansible) $ pip install --upgrade pip
+(ansible) $ pip install ansible
+(ansible) $ ansible --version
+(ansible) $ deactivate
+$ exit
+$ vagrant destroy -f rocky
+```
+
+
