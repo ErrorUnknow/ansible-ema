@@ -2,7 +2,7 @@
 
 Démarrez la VM ubuntu depuis le répertoire atelier-01.
 
-```vagrant up debian```
+```$ vagrant up debian```
 
 Connectez-vous à cette VM.
 
