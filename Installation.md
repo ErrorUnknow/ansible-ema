@@ -2,6 +2,8 @@
 
 Démarrez la VM ubuntu depuis le répertoire atelier-01.
 
+```vagrant up debian```
+
 Connectez-vous à cette VM.
 
 Rafraîchissez les informations sur les paquets.
