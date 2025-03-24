@@ -14,10 +14,17 @@ Connectez-vous au Control Host :
 ```sudo nano /etc/hosts```
 
 ```
-
-
+# /etc/hosts
+127.0.0.1      localhost.localdomain  localhost
+192.168.56.10  control.sandbox.lan    control
+192.168.56.20  target01.sandbox.lan   target01
+192.168.56.30  target02.sandbox.lan   target02
+192.168.56.40  target03.sandbox.lan   target03
+```
 
 Configurez l’authentification par clé SSH avec les trois Target Hosts.
+
+
 Installez Ansible.
 Envoyez un premier ping Ansible sans configuration.
 Créez un répertoire de projet ~/monprojet.
