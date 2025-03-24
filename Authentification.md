@@ -56,7 +56,9 @@ $ ssh-keygen
 $ ssh-copy-id vagrant@target01
 $ ssh-copy-id vagrant@target02
 $ ssh-copy-id vagrant@target03
-vagrant@control:~$ ansible all -i target01,target02,target03 -m ping
+$ vagrant@control:~$ ansible all -i target01,target02,target03 -m ping
+```
+```
 target03 | SUCCESS => {
     "ansible_facts": {
         "discovered_interpreter_python": "/usr/bin/python3"
