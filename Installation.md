@@ -1,18 +1,17 @@
 # Exercice 1
 
+Démarrez la VM ubuntu depuis le répertoire atelier-01.
 
-    Démarrez la VM ubuntu depuis le répertoire atelier-01.
+Connectez-vous à cette VM.
 
-    Connectez-vous à cette VM.
+Rafraîchissez les informations sur les paquets.
 
-    Rafraîchissez les informations sur les paquets.
+Recherchez le paquet ansible avec les options qui vont bien.
 
-    Recherchez le paquet ansible avec les options qui vont bien.
+Installez le paquet officiel fourni par la distribution.
 
-    Installez le paquet officiel fourni par la distribution.
+Vérifiez si l’installation s’est bien déroulée.
 
-    Vérifiez si l’installation s’est bien déroulée.
+Notez la version d’Ansible.
 
-    Notez la version d’Ansible.
-
-    Déconnectez-vous et supprimez la VM.
+Déconnectez-vous et supprimez la VM.
