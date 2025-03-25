@@ -18,8 +18,6 @@ $ cd ansible/projets/ema/
 Un premier playbook apache-debian.yml qui installe Apache sur l’hôte debian avec une page personnalisée Apache web server running on Debian Linux.
 ```
 $ nano apache-debian.yml
-$ yamllint apache-debian.yml
-$ ansible-playbook apache-debian.yml
 ```
 
 ```
@@ -46,11 +44,13 @@ $ ansible-playbook apache-debian.yml
         enabled: true
 ...
 ```
+```
+$ yamllint apache-debian.yml
+$ ansible-playbook apache-debian.yml
+```
 Un deuxième playbook apache-rocky.yml qui installe Apache sur l’hôte rocky avec une page personnalisée Apache web server running on Rocky Linux.
 ```
 $ nano apache-rocky.yml
-$ yamllint apache-rocky.yml
-$ ansible-playbook apache-rocky.yml
 ```
 
 ```
@@ -77,12 +77,15 @@ $ ansible-playbook apache-rocky.yml
         enabled: true
 ...
 ```
+```
+$ yamllint apache-rocky.yml
+$ ansible-playbook apache-rocky.yml
+```
 Un troisième playbook apache-suse.yml qui installe Apache sur l’hôte suse avec une page personnalisée Apache web server running on SUSE Linux.
 ```
 $ nano apache-suse.yml
-$ yamllint apache-suse.yml
-$ ansible-playbook aapache-suse.yml
 ```
+
 ```
 ---  # apache-suse.yml
 - name: Installer Apache et configurer une page personnalisée sur SUSE Linux
@@ -106,4 +109,8 @@ $ ansible-playbook aapache-suse.yml
         state: started
         enabled: true
 ...
+```
+```
+$ yamllint apache-suse.yml
+$ ansible-playbook apache-suse.yml
 ```
