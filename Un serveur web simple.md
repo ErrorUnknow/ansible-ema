@@ -20,7 +20,7 @@ Un premier playbook apache-debian.yml qui installe Apache sur l’hôte debian a
 $ nano apache-debian.yml
 ```
 
-```
+``` yml
 ---  # apache-debian.yml
 - name: Installer Apache et configurer une page personnalisée sur Debian
   hosts: debian
@@ -53,7 +53,7 @@ Un deuxième playbook apache-rocky.yml qui installe Apache sur l’hôte rocky a
 $ nano apache-rocky.yml
 ```
 
-```
+```yml
 ---  # apache-rocky.yml
 - name: Installer Apache et configurer une page personnalisée sur Rocky Linux
   hosts: rocky
@@ -86,7 +86,7 @@ Un troisième playbook apache-suse.yml qui installe Apache sur l’hôte suse av
 $ nano apache-suse.yml
 ```
 
-```
+```yml
 ---  # apache-suse.yml
 - name: Installer Apache et configurer une page personnalisée sur SUSE Linux
   hosts: suse
