@@ -48,7 +48,7 @@ $ ansible-playbook apache-debian.yml
 ```
 Un deuxième playbook apache-rocky.yml qui installe Apache sur l’hôte rocky avec une page personnalisée Apache web server running on Rocky Linux.
 ```
-$ nano apache-debian.yml
+$ nano apache-rocky.yml
 $ yamllint apache-rocky.yml
 $ ansible-playbook apache-rocky.yml
 ```
@@ -79,7 +79,7 @@ $ ansible-playbook apache-rocky.yml
 ```
 Un troisième playbook apache-suse.yml qui installe Apache sur l’hôte suse avec une page personnalisée Apache web server running on SUSE Linux.
 ```
-$ nano apache-debian.yml
+$ nano apache-suse.yml
 $ yamllint apache-suse.yml
 $ ansible-playbook aapache-suse.yml
 ```
