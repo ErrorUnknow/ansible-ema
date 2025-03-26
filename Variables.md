@@ -70,8 +70,74 @@ Là aussi, essayez de remplacer les deux variables en utilisant des extra vars a
     
 Écrivez un playbook myvars3.yml qui affiche le contenu des deux variables mycar et mybike mais sans les définir. Avant d’exécuter le playbook, définissez VW et BMW comme valeurs par défaut pour mycar et mybike pour tous les hôtes, en utilisant l’endroit approprié.
 
+```$ nano myvars3.yml```
+```
+---
+- name: Display mycar and mybike variables
+  hosts: localhost
+  tasks:
+    - name: Show my favorite car
+      debug:
+        msg: "My favorite car is {{ mycar }}"
+
+    - name: Show my favorite bike
+      debug:
+        msg: "My favorite bike is {{ mybike }}"
+...
+```
+
+```
+$ mkdir -v ~/ansible/projets/ema/group_vars
+$ cd group_vars/
+$ nano all.yml
+```
+```
+---  # group_vars/all.yml
+
+mycar: VW   
+mybike: BMW
+
+...
+```
+```
+$ cd ../
+$ ansible-playbook myvars3.yml
+```
     
 Effectuez le nécessaire pour remplacer VW et BMW par Mercedes et Honda sur l’hôte target02.
 
+```
+$ mkdir -v ~/ansible/projets/ema/host_vars
+$ cd host_vars/
+$ nano target02.yml
+```
+```
+---  # group_vars/target02.yml
+
+mycar: Mercedes
+mybike: Honda
+
+...
+```
+```
+$ cd ../
+$ ansible-playbook myvars3.yml
+```
+```
+---
+- name: Display mycar and mybike variables
+  hosts: all
+  tasks:
+    - name: Show my favorite car
+      debug:
+        msg: "My favorite car is {{ mycar }}"
+
+    - name: Show my favorite bike
+      debug:
+        msg: "My favorite bike is {{ mybike }}"
+...
+
+
+```
     
 Écrivez un playbook display_user.yml qui affiche un utilisateur et son mot de passe correspondant à l’aide des variables user et password. Ces deux variables devront être saisies de manière interactive pendant l’exécution du playbook. Les valeurs par défaut seront microlinux pour user et yatahongaga pour password. Le mot de passe ne devra pas s’afficher pendant la saisie.
