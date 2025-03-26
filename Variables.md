@@ -35,11 +35,37 @@ Rendez-vous dans le répertoire du projet :
 ```
 En utilisant les extra vars, remplacez successivement l’une et l’autre marque – puis les deux à la fois – avant d’exécuter le play.
 
+```
+$ ansible-playbook myvars1.yml -e "mycar='BMW M5'"
+$ ansible-playbook myvars1.yml -e "mybike='Kawasaki Ninja ZX-10R'"
+$ ansible-playbook myvars1.yml -e "mycar='Porsche 911' mybike='Kawasaki Ninja ZX-10R'"
+```
     
 Écrivez un playbook myvars2.yml qui fait essentiellement la même chose que myvars1.yml, mais en utilisant une tâche avec set_fact pour définir les deux variables.
 
-    
+```$ nano myvars2.yml```
+```
+---
+- name: Display my favorite car and bike using set_fact
+  hosts: localhost
+  tasks:
+    - name: Set mycar and mybike variables
+      set_fact:
+        mycar: "Tesla Model S"
+        mybike: "Ducati Panigale V4"
+
+    - name: Show my favorite car
+      debug:
+        msg: "My favorite car is {{ mycar }}"
+
+    - name: Show my favorite bike
+      debug:
+        msg: "My favorite bike is {{ mybike }}"
+...
+```
 Là aussi, essayez de remplacer les deux variables en utilisant des extra vars avant l’exécution du play.
+
+```ansible-playbook myvars2.yml -e "mycar='BMW M5' mybike='Yamaha R1'"```
 
     
 Écrivez un playbook myvars3.yml qui affiche le contenu des deux variables mycar et mybike mais sans les définir. Avant d’exécuter le playbook, définissez VW et BMW comme valeurs par défaut pour mycar et mybike pour tous les hôtes, en utilisant l’endroit approprié.
