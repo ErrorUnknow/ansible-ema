@@ -3,7 +3,7 @@
 
 # [Installation](Installation.md)
 # [Authentification](Authentification.md)
-# [Configuration de base](Configuration%20de%20base.md)
+# [Configuration de base](Configuration de base.md)
 # [Idempotence](Idempotence.md)
 # [Un serveur web simple](Un%20serveur%20web%20simple.md)
 # [Handler](Handler.md)
