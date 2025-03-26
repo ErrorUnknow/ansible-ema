@@ -81,5 +81,6 @@ Vérifiez l’idempotence de votre playbook.
 $ ansible-playbook chrony.yml
 $ ansible-playbook chrony.yml
 ```
+Tous est bien vert le yml est donc idempotent.
 
 
