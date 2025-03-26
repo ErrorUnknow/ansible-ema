@@ -35,3 +35,7 @@
 ---
 
 # [Variables enregistrées](Variables%20enregistr%C3%A9es.md)
+
+---
+
+# [Variables enregistrées](Variables%20enregistr%C3%A9es.md)
