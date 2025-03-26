@@ -33,13 +33,6 @@ Rendez-vous dans le répertoire du projet :
         enabled: true
       notify: Restart chronyd
 
-    - name: Backup the default /etc/chrony.conf
-      copy:
-        src: /etc/chrony.conf
-        dest: /etc/chrony.conf.bak
-        remote_src: true
-        backup: true
-
     - name: Install custom chrony configuration
       copy:
         dest: /etc/chrony.conf
