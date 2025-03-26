@@ -17,19 +17,21 @@ Rendez-vous dans le répertoire du projet :
 ```yml
 ---
 - name: Configure Chrony NTP service
-  hosts: redhat  # Cible le groupe 'redhat' dans l'inventaire
+  hosts: redhat
   become: true
   tasks:
     - name: Install chrony package
       package:
         name: chrony
         state: present
+      notify: Restart chronyd
 
     - name: Enable and start the chronyd service
-      service:
+      systemd:
         name: chronyd
         state: started
         enabled: true
+      notify: Restart chronyd
 
     - name: Backup the default /etc/chrony.conf
       copy:
@@ -54,11 +56,7 @@ Rendez-vous dans le répertoire du projet :
         owner: root
         group: root
         mode: '0644'
-
-    - name: Restart chronyd service to apply new configuration
-      service:
-        name: chronyd
-        state: restarted  # 'restarted' est un état valide
+      notify: Restart chronyd
 
     - name: Check chrony service status
       command: systemctl status chronyd
@@ -68,5 +66,11 @@ Rendez-vous dans le répertoire du projet :
     - name: Output chrony service status
       debug:
         var: chrony_status.stdout
+
+  handlers:
+    - name: Restart chronyd
+      systemd:
+        name: chronyd
+        state: restarted
 ...
 ```
