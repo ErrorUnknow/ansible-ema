@@ -63,4 +63,5 @@ Essayez d’obtenir le même résultat en utilisant le paramètre var du module 
         msg: "Total RPM packages installed: {{ rpm_package_count.stdout }}"
 ...
 ```
+```$ ansible-playbook packages.yml```
 
