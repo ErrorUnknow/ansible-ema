@@ -8,4 +8,4 @@
 # [Un serveur web simple](https://github.com/ErrorUnknow/ansible-ema/blob/main/Un%20serveur%20web%20simple.md)
 # [Handler](https://github.com/ErrorUnknow/ansible-ema/blob/main/Handler.md)
 # [Variables](https://github.com/ErrorUnknow/ansible-ema/blob/main/Variables.md)
-# [Variables](https://github.com/ErrorUnknow/ansible-ema/blob/main/Variables.md)
+# [Variables enregistrées](https://github.com/ErrorUnknow/ansible-ema/blob/main/Variables%20enregistr%C3%A9es.md)
