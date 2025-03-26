@@ -18,7 +18,7 @@ Rendez-vous dans le répertoire du projet :
 ---
 - name: Configure Chrony NTP service
   hosts: redhat  # Cible le groupe 'redhat' dans l'inventaire
-  become: true  # Utilisation de 'true' pour activer l'élévation des privilèges
+  become: true
   tasks:
     - name: Install chrony package
       package:
@@ -29,14 +29,14 @@ Rendez-vous dans le répertoire du projet :
       service:
         name: chronyd
         state: started
-        enabled: true  # Utilisation de 'true' pour activer l'activation du service au démarrage
+        enabled: true
 
     - name: Backup the default /etc/chrony.conf
       copy:
         src: /etc/chrony.conf
         dest: /etc/chrony.conf.bak
-        remote_src: true  # Utilisation de 'true' pour indiquer qu'il s'agit d'une source distante
-        backup: true  # Utilisation de 'true' pour activer la fonctionnalité de sauvegarde
+        remote_src: true
+        backup: true
 
     - name: Install custom chrony configuration
       copy:
