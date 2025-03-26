@@ -7,4 +7,4 @@
 # [Idempotence](https://github.com/ErrorUnknow/ansible-ema/blob/main/Idempotence.md)
 # [Un serveur web simple](https://github.com/ErrorUnknow/ansible-ema/blob/main/Un%20serveur%20web%20simple.md)
 # [Handler](https://github.com/ErrorUnknow/ansible-ema/blob/main/Handler.md)
-# [Handler](https://github.com/ErrorUnknow/ansible-ema/blob/main/Handler.md)
+# [Variables](https://github.com/ErrorUnknow/ansible-ema/blob/main/Variables.md)
