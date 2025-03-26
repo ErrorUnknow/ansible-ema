@@ -65,7 +65,7 @@ $ ansible-playbook myvars1.yml -e "mycar='Porsche 911' mybike='Kawasaki Ninja ZX
 ```
 Là aussi, essayez de remplacer les deux variables en utilisant des extra vars avant l’exécution du play.
 
-```ansible-playbook myvars2.yml -e "mycar='BMW M5' mybike='Yamaha R1'"```
+```$ ansible-playbook myvars2.yml -e "mycar='BMW M5' mybike='Yamaha R1'"```
 
     
 Écrivez un playbook myvars3.yml qui affiche le contenu des deux variables mycar et mybike mais sans les définir. Avant d’exécuter le playbook, définissez VW et BMW comme valeurs par défaut pour mycar et mybike pour tous les hôtes, en utilisant l’endroit approprié.
