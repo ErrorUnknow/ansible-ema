@@ -91,7 +91,7 @@ $ mkdir -v ~/ansible/projets/ema/group_vars
 $ cd group_vars/
 $ nano all.yml
 ```
-```
+```yml
 ---  # group_vars/all.yml
 
 mycar: VW   
@@ -111,7 +111,7 @@ $ mkdir -v ~/ansible/projets/ema/host_vars
 $ cd host_vars/
 $ nano target02.yml
 ```
-```
+```yml
 ---  # group_vars/target02.yml
 
 mycar: Mercedes
