@@ -14,7 +14,25 @@ Rendez-vous dans le répertoire du projet :
 
 Écrivez un playbook myvars1.yml qui affiche respectivement votre voiture et votre moto préférée en utilisant le module debug et deux variables mycar et mybike définies en tant que play vars.
 
-    
+```$ nano myvars1.yml```
+
+```
+---
+- name: Display my favorite car and bike
+  hosts: localhost
+  vars:
+    mycar: "Tesla Model S"
+    mybike: "Ducati Panigale V4"
+  tasks:
+    - name: Show my favorite car
+      debug:
+        msg: "My favorite car is {{ mycar }}"
+
+    - name: Show my favorite bike
+      debug:
+        msg: "My favorite bike is {{ mybike }}"
+...
+```
 En utilisant les extra vars, remplacez successivement l’une et l’autre marque – puis les deux à la fois – avant d’exécuter le play.
 
     
