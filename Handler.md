@@ -74,3 +74,14 @@ Rendez-vous dans le répertoire du projet :
         state: restarted
 ...
 ```
+Vérifiez la syntaxe correcte de votre playbook chrony.yml.
+
+```$ yamllint chrony.yml```
+
+Vérifiez l’idempotence de votre playbook.
+```
+$ ansible-playbook chrony.yml
+$ ansible-playbook chrony.yml
+```
+
+
