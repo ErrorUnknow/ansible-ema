@@ -41,3 +41,26 @@ Essayez d’obtenir le même résultat en utilisant le paramètre var du module 
         var: kernel_info.stdout
 ...
 ```
+```$ ansible-playbook kernel.yml```
+
+Écrivez un playbook packages.yml qui affiche le nombre total de paquets RPM installés sur les hôtes rocky et suse (rpm -qa | wc -l).
+
+```$ nano packages.yml```
+
+```
+---
+- name: Display the total number of installed RPM packages
+  hosts: rocky,suse
+  gather_facts: false
+  tasks:
+    - name: Get the total number of installed RPM packages
+      shell: rpm -qa | wc -l
+      register: rpm_package_count
+      changed_when: false
+
+    - name: Display the total number of RPM packages
+      debug:
+        msg: "Total RPM packages installed: {{ rpm_package_count.stdout }}"
+...
+```
+
