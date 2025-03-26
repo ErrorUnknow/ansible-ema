@@ -58,20 +58,18 @@ Rendez-vous dans le répertoire du projet :
         mode: '0644'
       notify: Restart chronyd
 
-    - name: Check chrony service status
-      command: systemctl status chronyd
-      register: chrony_status
-      failed_when: "'Active: active (running)' not in chrony_status.stdout"
-
-    - name: Output chrony service status
-      debug:
-        var: chrony_status.stdout
-
   handlers:
     - name: Restart chronyd
       systemd:
         name: chronyd
         state: restarted
+
+    - name: Check and restart chronyd service if needed
+      command: systemctl status chronyd
+      register: chrony_status
+      failed_when: "'Active: active (running)' not in chrony_status.stdout"
+      changed_when: false
+      notify: Restart chronyd
 ...
 ```
 Vérifiez la syntaxe correcte de votre playbook chrony.yml.
