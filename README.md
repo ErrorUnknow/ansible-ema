@@ -2,7 +2,7 @@
 
 ---
 
-Voici l'image de test [ici](Tests/test-02-vagrant-up.png)
+Voici l'image de test [ici](Tests/test-02-vagrant-up.png).
 
 ## [Installation](Solutions/Installation.md)
 
