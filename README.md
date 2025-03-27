@@ -39,3 +39,11 @@
 ---
 
 # [Facts et variables implicites](Facts%20et%20variables%20implicites.md)
+
+---
+
+# [Cibles hétérogènes](Cibles%20hétérogènes.md)
+
+
+
+
