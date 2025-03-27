@@ -45,7 +45,7 @@ dns-info.yml pour afficher le(s) serveur(s) DNS utilisé(s)
 ---
 - name: Display DNS information
   hosts: all
-  gather_facts: yes
+  gather_facts: true
   tasks:
     - name: Display DNS servers
       debug:
