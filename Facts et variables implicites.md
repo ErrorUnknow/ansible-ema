@@ -5,6 +5,7 @@
 Écrivez trois playbooks pour afficher des informations sur chacun des Target Hosts :
 
 pkg-info.yml pour afficher le gestionnaire de paquets utilisé
+
 ```$ nano pkg-info.yml```
 
 ```yml
@@ -21,6 +22,7 @@ pkg-info.yml pour afficher le gestionnaire de paquets utilisé
 ```$ ansible-playbook pkg-info.yml```
 
 python-info.yml pour afficher la version de Python installée
+
 ```$ nano python-info.yml```
 ```yml
 ---
