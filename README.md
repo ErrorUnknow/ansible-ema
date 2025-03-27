@@ -2,7 +2,7 @@
 
 ---
 
-## [test-02-vagrant-up.png](https://github.com/ErrorUnknow/ansible-ema/blob/main/test-02-vagrant-up.png)
+Voici l'image de test [ici](tests/test-02-vagrant-up.png)
 
 ## [Installation](Solutions/Installation.md)
 
