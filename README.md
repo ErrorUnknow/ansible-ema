@@ -6,44 +6,44 @@
 
 ---
 
-# [Installation](Installation.md)
+# [Installation](Solutions/Installation.md)
 
 ---
 
-# [Authentification](Authentification.md)
+# [Authentification](Solutions/Authentification.md)
 
 ---
 
-# [Configuration de base](Configuration%20de%20base.md)
+# [Configuration de base](Solutions/Configuration%20de%20base.md)
 
 ---
 
-# [Idempotence](Idempotence.md)
+# [Idempotence](Solutions/Idempotence.md)
 
 ---
 
-# [Un serveur web simple](Un%20serveur%20web%20simple.md)
+# [Un serveur web simple](Solutions/Un%20serveur%20web%20simple.md)
 
 ---
 
-# [Handler](Handler.md)
+# [Handler](Solutions/Handler.md)
 
 ---
 
-# [Variables](Variables.md)
+# [Variables](Solutions/Variables.md)
 
 ---
 
-# [Variables enregistrées](Variables%20enregistr%C3%A9es.md)
+# [Variables enregistrées](Solutions/Variables%20enregistr%C3%A9es.md)
 
 ---
 
-# [Facts et variables implicites](Facts%20et%20variables%20implicites.md)
+# [Facts et variables implicites](Solutions/Facts%20et%20variables%20implicites.md)
 
 ---
 
-# [Cibles hétérogènes](Cibles%20hétérogènes.md)
+# [Cibles hétérogènes](Solutions/Cibles%20hétérogènes.md)
 
 ---
 
-# [Jinja & Templates](Jinja%20&%20Templates.md)
+# [Jinja & Templates](Solutions/Jinja%20&%20Templates.md)
